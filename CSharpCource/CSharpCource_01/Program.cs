@@ -7,7 +7,9 @@
             string data = Console.ReadLine();
             
             Console.WriteLine("Привет, " + data + "!");
-        
+
+            // временное изменение
+
         }
 
         static void TestStrings()

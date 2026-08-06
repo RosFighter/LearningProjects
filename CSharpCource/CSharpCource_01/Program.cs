@@ -1,9 +1,28 @@
-﻿namespace CSharpCource_01
+﻿using System.Text;
+
+namespace CSharpCource_01
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            // построитель строк; выгоден при конкатенации (объединении) более чем 7 строк
+            StringBuilder sb = new StringBuilder();
+            sb.Append("My ");
+            sb.Append("name ");
+            sb.Append("is ");
+            sb.Append("John");
+            sb.AppendLine("!");
+            sb.AppendLine("Hello!");
+
+            string str = sb.ToString();
+            Console.WriteLine(str);
+
+        }
+
+        static void StringEditing()
+        {
+            // методы изменения строк
             string nameConcat = string.Concat("My ", "name ", "is ", "John");
             Console.WriteLine(nameConcat);
 

@@ -6,6 +6,42 @@ namespace CSharpCource_01
     {
         static void Main(string[] args)
         {
+        
+        }
+
+        static void FormatString()
+        {
+            // форматировнаие строк
+            string name = "John";
+            int age = 30;
+            string str1 = string.Format("My name is {0} and I'm {1} years old.", name, age);
+            // Console.WriteLine(str1);
+
+            str1 = "My name is " + name + " and I'm " + age + "yars old.";
+            // Console.WriteLine(str1);
+
+            string str2 = $"My name is {name} and I'm {age} years old.";
+            // Console.WriteLine(str2);
+
+            // перевод каретки на новую строку
+            string str3 = "My name is \nJohn";  // для винды
+            str3 = "My name is \r\nJohn";   // для некоторых платформ (пока не знаю, каких именно)
+            str3 = $"My name is {Environment.NewLine}John";     // одинаково для любой платформы
+
+            // экранирование спец.символов
+            // \" - кавычка
+            // \n - новая строка
+            // \t - табуляция
+            // \\ - одинарный слеш
+            string str4 = "C:\\tmp\\test_files.txt";
+            string str5 = @"C:\tmp\test_files.txt";     // @ перед кавычкой заставит показать строку "как есть", экранирование не требуется
+
+
+            Console.WriteLine(str5);
+
+        }
+        static void String_Builder()
+        {
             // построитель строк; выгоден при конкатенации (объединении) более чем 7 строк
             StringBuilder sb = new StringBuilder();
             sb.Append("My ");
